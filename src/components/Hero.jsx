@@ -25,7 +25,7 @@ function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
 
           <a
-            href="https://github.com/YOUR_USERNAME"
+            href="https://github.com/AnuragHemanth"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-indigo-600 text-white px-6 py-3 rounded-xl shadow-lg hover:scale-105 transition"
