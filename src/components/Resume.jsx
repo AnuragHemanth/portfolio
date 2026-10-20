@@ -1,46 +1,91 @@
+
+import {
+  FileText,
+  Download,
+  ExternalLink,
+  Code2,
+  BriefcaseBusiness,
+} from "lucide-react";
+
 function Resume() {
   return (
     <section
       id="resume"
-      className="px-6 md:px-10 py-24 bg-gradient-to-r from-indigo-50 via-white to-cyan-50"
+      className="border-t border-gray-800 bg-[#0a0a0b] px-6 py-24 text-white md:px-10"
     >
-      <div className="max-w-4xl mx-auto text-center">
+      <div className="mx-auto max-w-5xl">
+        <div className="relative overflow-hidden rounded-3xl border border-gray-800 bg-[#111114] p-8 text-center sm:p-12 md:p-16">
+          {/* Background decoration */}
+          <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-lime-400/5 blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-24 -left-20 h-64 w-64 rounded-full bg-emerald-400/5 blur-3xl" />
 
-        {/* Heading */}
-        <h2 className="text-4xl md:text-5xl font-bold text-indigo-600 mb-6">
-          My Resume
-        </h2>
+          <div className="relative">
+            {/* Icon */}
+            <div className="mx-auto mb-7 grid h-16 w-16 place-items-center rounded-2xl border border-lime-400/20 bg-lime-400/10 text-lime-400">
+              <FileText size={30} strokeWidth={1.5} />
+            </div>
 
-        {/* Description */}
-        <p className="text-lg text-gray-700 mb-10 leading-relaxed">
-          Download my resume to explore my technical skills, 
-          project experience, and academic background. 
-          I am passionate about building intelligent systems 
-          and scalable applications.
-        </p>
+            {/* Heading */}
+            <p className="mb-3 text-sm font-medium uppercase tracking-[0.3em] text-lime-400">
+              Professional profile
+            </p>
 
-        {/* Buttons */}
-        <div className="flex flex-col sm:flex-row justify-center gap-6">
+            <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
+              My <span className="text-gray-500">Resume.</span>
+            </h2>
 
-          {/* View Resume */}
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-indigo-600 text-white px-8 py-4 rounded-xl shadow-lg hover:scale-105 transition text-lg"
-          >
-            👀 View Resume
-          </a>
+            {/* Description */}
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-gray-400">
+              Explore my technical skills, software development projects,
+              education, and experience. My focus is on Java development,
+              problem-solving, and building practical applications with
+              modern technologies.
+            </p>
 
-          {/* Download Resume */}
-          <a
-            href="/resume.pdf"
-            download
-            className="border-2 border-indigo-600 text-indigo-600 px-8 py-4 rounded-xl hover:bg-indigo-600 hover:text-white transition text-lg"
-          >
-            📄 Download Resume
-          </a>
+            {/* Highlights */}
+            <div className="my-9 flex flex-wrap justify-center gap-3">
+              <span className="inline-flex items-center gap-2 rounded-full border border-gray-700 bg-[#19191c] px-4 py-2 text-xs text-gray-300">
+                <Code2 size={15} className="text-lime-400" />
+                Java & DSA
+              </span>
 
+              <span className="inline-flex items-center gap-2 rounded-full border border-gray-700 bg-[#19191c] px-4 py-2 text-xs text-gray-300">
+                <FileText size={15} className="text-lime-400" />
+                Full-Stack Projects
+              </span>
+
+              <span className="inline-flex items-center gap-2 rounded-full border border-gray-700 bg-[#19191c] px-4 py-2 text-xs text-gray-300">
+                <BriefcaseBusiness size={15} className="text-lime-400" />
+                Technical Experience
+              </span>
+            </div>
+
+            {/* Action buttons */}
+            <div className="flex flex-col justify-center gap-4 sm:flex-row">
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-lime-400 px-7 py-4 font-semibold text-black transition hover:-translate-y-1 hover:bg-lime-300"
+              >
+                <ExternalLink size={18} />
+                View Resume
+              </a>
+
+              <a
+                href="/resume.pdf"
+                download="Hemanth-Resume.pdf"
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-700 px-7 py-4 font-semibold text-white transition hover:-translate-y-1 hover:border-lime-400 hover:text-lime-400"
+              >
+                <Download size={18} />
+                Download Resume
+              </a>
+            </div>
+
+            <p className="mt-6 text-xs text-gray-500">
+              Java Development · Software Engineering · Full-Stack Development
+            </p>
+          </div>
         </div>
       </div>
     </section>
